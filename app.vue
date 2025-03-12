@@ -1,5 +1,8 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div class="container mx-auto">
-    o/
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

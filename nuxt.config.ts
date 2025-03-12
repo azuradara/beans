@@ -1,12 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: {
     enabled: true,
 
     timeline: {
-      enabled: true
-    }
+      enabled: true,
+    },
   },
   modules: [
     '@vueuse/nuxt',
@@ -14,17 +13,18 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'shadcn-nuxt',
     '@nuxtjs/color-mode',
-    'dayjs-nuxt'
+    'dayjs-nuxt',
+    '@nuxtjs/mdc',
   ],
   unocss: {
-    nuxtLayers: true
+    nuxtLayers: true,
   },
   shadcn: {
     prefix: '',
     componentDir: './components/ui',
   },
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
   eslint: {
     config: {
@@ -42,5 +42,10 @@ export default defineNuxtConfig({
 
   features: {
     inlineStyles: false,
+  },
+
+  // loaded from .env
+  runtimeConfig: {
+    githubToken: '',
   },
 })
